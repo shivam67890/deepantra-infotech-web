@@ -1,0 +1,13 @@
+{
+  "name": "Deepantra Infotech",
+  "short_name": "Deepantra",
+  "description": "AI education programs for schools and colleges, plus SaaS/PaaS/IaaS, AI implementation, website development and LMS solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D9932C",
+  "icons": [
+    { "src": "/assets/android-chrome-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

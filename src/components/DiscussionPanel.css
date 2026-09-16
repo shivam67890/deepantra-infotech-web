@@ -1,0 +1,47 @@
+.disc-panel { margin-top: 2rem; }
+.disc-panel__header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+.disc-panel__header h3 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 800; margin: 0; flex: 1; }
+.disc-panel__header svg { color: var(--color-accent); }
+.disc-panel__new-btn {
+  font-size: 0.78rem; font-weight: 700; padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full); border: 1px solid var(--color-primary);
+  background: none; color: var(--color-primary); cursor: pointer;
+}
+.disc-panel__empty { color: var(--color-muted); font-size: 0.85rem; text-align: center; padding: 1rem 0; }
+.disc-panel__form { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+.disc-panel__form input, .disc-panel__form textarea {
+  padding: 0.6rem 0.85rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border); background: var(--color-card-bg);
+  color: var(--color-ink); font-size: 0.85rem; resize: vertical;
+}
+.disc-panel__threads { display: flex; flex-direction: column; gap: 0.75rem; }
+.disc-thread {
+  background: var(--color-card-bg); border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm); padding: 1rem;
+}
+.disc-thread__head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem; }
+.disc-thread__head strong { font-size: 0.82rem; color: var(--color-ink); }
+.disc-thread__title { font-size: 0.85rem; font-weight: 700; color: var(--color-ink); }
+.disc-thread__body { font-size: 0.82rem; color: var(--color-text); margin: 0.25rem 0 0.75rem; line-height: 1.5; }
+
+.disc-reply {
+  padding: 0.55rem 0.75rem; margin-bottom: 0.35rem;
+  border-left: 3px solid var(--color-border); margin-left: 0.5rem;
+  font-size: 0.82rem;
+}
+.disc-reply--instructor { border-left-color: var(--color-accent); background: rgba(99,102,241,0.04); }
+.disc-reply__badge { color: var(--color-accent); vertical-align: -1px; margin-right: 0.3rem; }
+.disc-reply strong { color: var(--color-ink); }
+.disc-reply p { margin: 0.2rem 0 0; color: var(--color-text); line-height: 1.5; }
+
+.disc-reply-form { display: flex; gap: 0.35rem; margin-top: 0.5rem; }
+.disc-reply-form input {
+  flex: 1; padding: 0.45rem 0.7rem; border-radius: var(--radius-full);
+  border: 1px solid var(--color-border); background: var(--color-bg-soft);
+  color: var(--color-ink); font-size: 0.8rem; outline: none;
+}
+.disc-reply-form button {
+  background: var(--color-accent); color: #fff; border: none;
+  border-radius: 50%; width: 28px; height: 28px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}

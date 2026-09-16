@@ -1,0 +1,100 @@
+/* ============================================================
+   LEADERBOARD PREVIEW — Homepage top-5 mini-board
+============================================================ */
+.lb-preview {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.lb-preview--empty {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  padding: 2rem 1.5rem;
+  justify-content: center;
+}
+.lb-preview__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+.lb-preview__header h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin: 0;
+  flex: 1;
+}
+.lb-preview__header svg {
+  color: var(--color-primary);
+}
+.lb-preview__link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.lb-preview__link:hover {
+  opacity: 0.7;
+}
+
+.lb-preview__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lb-preview__row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+.lb-preview__row:hover {
+  background: var(--color-bg);
+}
+.lb-preview__row--you {
+  border-color: var(--color-primary);
+  background: rgba(245, 158, 11, 0.06);
+}
+:root[data-theme='dark'] .lb-preview__row--you {
+  background: rgba(251, 191, 36, 0.08);
+}
+
+.lb-preview__rank {
+  font-size: 0.9rem;
+  font-weight: 800;
+  min-width: 2rem;
+  text-align: center;
+  color: var(--color-ink);
+}
+.lb-preview__name {
+  flex: 1;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.lb-preview__sessions {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+.lb-preview__score {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  min-width: 3rem;
+  text-align: right;
+}

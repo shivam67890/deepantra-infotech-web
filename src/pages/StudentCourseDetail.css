@@ -1,0 +1,273 @@
+.course-detail__header {
+  margin-bottom: 24px;
+}
+
+.course-detail__progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.course-detail__progress .portal-progress {
+  flex: 1;
+  max-width: 320px;
+}
+
+.course-detail__layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.course-detail__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: sticky;
+  top: 24px;
+}
+
+.course-detail__lesson-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.course-detail__lesson-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.course-detail__lesson-btn.is-active {
+  border-color: currentColor;
+  background: rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+}
+
+.course-detail__lesson-btn.is-done .course-detail__lesson-icon {
+  color: #16a34a;
+}
+
+.course-detail__lesson-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-detail__content {
+  min-width: 0;
+}
+
+.course-detail__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+/* Slide (PPT-style) lesson */
+.slide-lesson__deck {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-lesson__image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.slide-lesson__heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.slide-lesson__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.slide-lesson__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Code lesson */
+.code-lesson__instructions {
+  margin-bottom: 16px;
+}
+
+.code-lesson__editor {
+  width: 100%;
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #0f172a;
+  color: #e2e8f0;
+  resize: vertical;
+}
+
+.code-lesson__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+  .course-detail__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .course-detail__sidebar {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+
+/* Practice with Games section */
+.course-games {
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border, rgba(0,0,0,0.1));
+  padding-top: 2rem;
+}
+
+.course-games__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-primary, #6366f1);
+}
+
+.course-games__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink, #1e293b);
+  margin: 0;
+}
+
+.course-games__sub {
+  color: var(--color-muted, #64748b);
+  font-size: 0.85rem;
+  margin: 0.15rem 0 0;
+}
+
+.course-games__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+
+.course-games__card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border, rgba(0,0,0,0.1));
+  background: var(--color-card-bg, #fff);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.course-games__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border-color: var(--color-primary, #6366f1);
+}
+
+.course-games__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.course-games__level-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-muted, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.course-games__diff {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.course-games__diff--easy {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+.course-games__diff--medium {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.course-games__diff--hard {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+.course-games__card-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink, #1e293b);
+  margin-bottom: 0.25rem;
+}
+
+.course-games__card-desc {
+  font-size: 0.82rem;
+  color: var(--color-muted, #64748b);
+  line-height: 1.4;
+  margin: 0 0 0.6rem;
+  flex: 1;
+}
+
+.course-games__card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.75rem;
+  color: var(--color-muted, #94a3b8);
+}
+
+.course-games__card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}

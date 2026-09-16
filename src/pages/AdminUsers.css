@@ -1,0 +1,21 @@
+.au-search {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.55rem 1rem; background: var(--color-card-bg);
+  border: 1px solid var(--color-border); border-radius: var(--radius-full);
+  max-width: 500px; margin-bottom: 1.5rem;
+}
+.au-search svg { color: var(--color-muted); flex-shrink: 0; }
+.au-search input { flex: 1; border: none; background: none; outline: none; font-size: 0.88rem; color: var(--color-ink); }
+.au-table-wrap { overflow-x: auto; }
+.au-table { width: 100%; border-collapse: separate; border-spacing: 0 0.3rem; }
+.au-table th { text-align: left; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-muted); padding: 0.5rem 0.75rem; }
+.au-table td { padding: 0.65rem 0.75rem; font-size: 0.85rem; color: var(--color-text); background: var(--color-card-bg); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.au-table td:first-child { border-left: 1px solid var(--color-border); border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.au-table td:last-child { border-right: 1px solid var(--color-border); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.au-name { font-weight: 600; color: var(--color-ink); }
+.au-date { font-size: 0.78rem; color: var(--color-muted); }
+.au-role-select {
+  padding: 0.3rem 0.5rem; border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border); background: var(--color-bg-soft);
+  color: var(--color-ink); font-size: 0.8rem; font-weight: 600; cursor: pointer;
+}

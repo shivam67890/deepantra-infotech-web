@@ -1,0 +1,59 @@
+/* ============================================================
+   TEACHER GRADING QUEUE
+============================================================ */
+.tgq-header {
+  display: flex; align-items: center; gap: 0.85rem; margin-bottom: 2rem;
+}
+.tgq-header svg { color: var(--color-primary); }
+.tgq-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem; font-weight: 800; margin: 0;
+}
+.tgq-header p { font-size: 0.85rem; color: var(--color-muted); margin: 0; }
+
+.tgq-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.tgq-card__header {
+  display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+.tgq-card__header strong { font-size: 0.92rem; color: var(--color-ink); }
+.tgq-card__course {
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.15rem 0.5rem; border-radius: var(--radius-full);
+  background: rgba(99, 102, 241, 0.1); color: var(--color-accent);
+}
+.tgq-card__date { font-size: 0.75rem; color: var(--color-muted); margin-left: auto; }
+
+.tgq-answer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 0.65rem 0;
+  border-top: 1px solid var(--color-border);
+}
+.tgq-answer:first-of-type { border-top: none; }
+
+.tgq-answer__response { flex: 1; font-size: 0.85rem; color: var(--color-text); }
+.tgq-answer__q { font-weight: 800; color: var(--color-ink); margin-right: 0.5rem; }
+
+.tgq-answer__actions { display: flex; gap: 0.4rem; }
+.tgq-btn {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.3rem 0.65rem; border-radius: var(--radius-full);
+  font-size: 0.75rem; font-weight: 700; border: 1px solid;
+  cursor: pointer; transition: background 0.2s;
+}
+.tgq-btn--correct {
+  background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);
+  color: var(--color-green);
+}
+.tgq-btn--correct:hover { background: rgba(16, 185, 129, 0.15); }
+.tgq-btn--wrong {
+  background: rgba(239, 68, 68, 0.06); border-color: rgba(239, 68, 68, 0.2);
+  color: #DC2626;
+}
+.tgq-btn--wrong:hover { background: rgba(239, 68, 68, 0.12); }

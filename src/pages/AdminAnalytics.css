@@ -1,0 +1,6 @@
+.aa-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.aa-chart-card {
+  background: var(--color-card-bg); border: 1px solid var(--color-border);
+  border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}

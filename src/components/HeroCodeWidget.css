@@ -1,0 +1,187 @@
+/* ===== Hero Code Widget ===== */
+.code-widget {
+  background: #0f1117;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 4px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.82rem;
+  color: #cdd6f4;
+  position: relative;
+  transform: perspective(900px) rotateY(-3deg) rotateX(2deg);
+  transition: transform 0.4s ease;
+}
+
+.code-widget:hover {
+  transform: perspective(900px) rotateY(0deg) rotateX(0deg);
+}
+
+/* ---- Title bar ---- */
+.code-widget__titlebar {
+  background: #1e2130;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.code-widget__dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot--red    { background: #ff5f57; }
+.dot--yellow { background: #febc2e; }
+.dot--green  { background: #28c840; }
+
+/* ---- Tabs ---- */
+.code-widget__tabs {
+  display: flex;
+  gap: 0.15rem;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.code-widget__tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #8892b0;
+  font-size: 0.73rem;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: color 0.2s ease, background 0.2s ease;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.code-widget__tab--active {
+  background: #D9932C;
+  color: #0f1117;
+  font-weight: 700;
+}
+
+/* ---- Code body ---- */
+.code-widget__body {
+  padding: 1rem 1.1rem 0.8rem;
+  min-height: 160px;
+}
+
+.code-widget__grade-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(217, 147, 44, 0.18);
+  border: 1px solid rgba(217, 147, 44, 0.35);
+  border-radius: 6px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #D9932C;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+.code-widget__live {
+  color: #2FB380;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.code-widget__code {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+}
+
+/* ---- Code lines with slide-in animation ---- */
+.code-widget__line {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.code-widget__line--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- Syntax colors ---- */
+.code-widget__comment { color: #6272a4; font-style: italic; }
+.code-widget__keyword  { color: #ff79c6; }
+.code-widget__fn       { color: #50fa7b; }
+.code-widget__log      { color: #8be9fd; }
+.code-widget__string   { color: #f1fa8c; }
+.code-widget__tag      { color: #ff79c6; }
+.code-widget__attr     { color: #f1fa8c; }
+.code-widget__plain    { color: #cdd6f4; }
+
+/* ---- Blinking cursor ---- */
+.code-widget__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1rem;
+  background: #D9932C;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  50% { opacity: 0; }
+}
+
+/* ---- Footer stats ---- */
+.code-widget__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #161821;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 0.5rem 1rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.code-widget__stat {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: #8892b0;
+  font-weight: 500;
+}
+
+.code-widget__stat-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2FB380;
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+.code-widget__stat--right {
+  color: #D9932C;
+  font-weight: 600;
+}

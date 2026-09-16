@@ -1,0 +1,115 @@
+.portal-page {
+  padding-block: 3rem 5rem;
+  background: var(--color-bg);
+  min-height: calc(100vh - var(--nav-height));
+}
+.portal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease;
+}
+.portal-back:hover { color: var(--color-primary); }
+.portal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.portal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+.portal-sub {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+.portal-table-wrap {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.portal-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.portal-table th,
+.portal-table td {
+  text-align: left;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+.portal-table th {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--color-bg-soft);
+}
+.portal-table tbody tr:last-child td { border-bottom: none; }
+.portal-table tbody tr:hover td { background: var(--color-bg-soft); }
+.portal-table tr.is-you td { background: var(--color-primary-glow); }
+.portal-rank {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+
+/* ============================================================
+   LEADERBOARD CHARTS (Phase 2)
+============================================================ */
+.lb-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .lb-charts-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+}
+
+.lb-chart-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+.lb-chart-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin: 0 0 0.75rem;
+}
+
+.lb-heatmap-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+/* Calendar heatmap color overrides */
+.react-calendar-heatmap .color-empty { fill: var(--color-bg-soft); }
+.react-calendar-heatmap .color-scale-1 { fill: rgba(245, 158, 11, 0.2); }
+.react-calendar-heatmap .color-scale-2 { fill: rgba(245, 158, 11, 0.4); }
+.react-calendar-heatmap .color-scale-3 { fill: rgba(245, 158, 11, 0.65); }
+.react-calendar-heatmap .color-scale-4 { fill: rgba(245, 158, 11, 0.9); }
+.react-calendar-heatmap text { fill: var(--color-muted); font-size: 8px; }

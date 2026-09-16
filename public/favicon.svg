@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#F7D774"/>
+      <stop offset="45%" stop-color="#E8A94A"/>
+      <stop offset="75%" stop-color="#D9932C"/>
+      <stop offset="100%" stop-color="#B5474C"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke="url(#grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- rays -->
+    <line x1="65" y1="60" x2="56" y2="44"/>
+    <line x1="78" y1="42" x2="73" y2="24"/>
+    <line x1="100" y1="38" x2="100" y2="18"/>
+    <line x1="122" y1="42" x2="127" y2="24"/>
+    <line x1="135" y1="60" x2="144" y2="44"/>
+
+    <!-- bulb outline -->
+    <circle cx="100" cy="85" r="32"/>
+
+    <!-- filament loops -->
+    <path d="M88,112 L88,96 Q88,84 100,84 Q112,84 112,96 L112,112"/>
+
+    <!-- neck -->
+    <line x1="88" y1="112" x2="88" y2="128"/>
+    <line x1="112" y1="112" x2="112" y2="128"/>
+
+    <!-- screw threads -->
+    <line x1="86" y1="118" x2="114" y2="118"/>
+    <line x1="86" y1="124" x2="114" y2="124"/>
+    <line x1="90" y1="130" x2="110" y2="130"/>
+
+    <!-- infinity -->
+    <path d="M60,155 C60,133 82,133 100,155 C118,177 140,177 140,155 C140,133 118,133 100,155 C82,177 60,177 60,155 Z"
+          stroke-width="9"/>
+  </g>
+</svg>

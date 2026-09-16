@@ -1,0 +1,80 @@
+/* ============================================================
+   COURSE LEADERBOARD — Full page
+============================================================ */
+.cl-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.cl-header svg {
+  color: var(--color-primary);
+}
+.cl-header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+}
+.cl-header p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.cl-table-wrap {
+  overflow-x: auto;
+}
+
+.cl-table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: separate;
+  border-spacing: 0 0.35rem;
+}
+.cl-table th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  padding: 0.5rem 0.85rem;
+}
+.cl-table td {
+  padding: 0.75rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--color-text);
+  background: var(--color-card-bg);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.cl-table td:first-child {
+  border-left: 1px solid var(--color-border);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+.cl-table td:last-child {
+  border-right: 1px solid var(--color-border);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.cl-row--you td {
+  border-color: var(--color-primary);
+  background: rgba(245, 158, 11, 0.06);
+}
+:root[data-theme='dark'] .cl-row--you td {
+  background: rgba(251, 191, 36, 0.08);
+}
+.cl-rank {
+  font-weight: 800;
+  color: var(--color-ink);
+  min-width: 3rem;
+}
+.cl-name {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.cl-pts {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  color: var(--color-primary);
+}

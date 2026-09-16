@@ -1,0 +1,127 @@
+/* ============================================================
+   TEACHER STUDENT DETAIL
+============================================================ */
+.tsd-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.tsd-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+.tsd-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.tsd-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0;
+}
+.tsd-meta {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+.tsd-course-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+}
+
+/* Progress stats */
+.tsd-progress-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.tsd-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+.tsd-stat strong {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-ink);
+}
+.tsd-stat span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tsd-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* Grade cards */
+.tsd-grade-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.tsd-grade-card__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-ink);
+}
+.tsd-grade-card__date {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+/* Per-question answer rows */
+.tsd-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.tsd-answer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+.tsd-answer--correct { background: rgba(16, 185, 129, 0.06); }
+.tsd-answer--wrong { background: rgba(239, 68, 68, 0.06); }
+.tsd-answer__icon { display: flex; }
+.tsd-answer--correct .tsd-answer__icon { color: var(--color-green); }
+.tsd-answer--wrong .tsd-answer__icon { color: #EF4444; }
+.tsd-answer__q { font-weight: 800; color: var(--color-ink); min-width: 2rem; }
+.tsd-answer__response { flex: 1; color: var(--color-text); }
+.tsd-answer__pts {
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 3rem;
+  text-align: right;
+}
+.tsd-answer__time {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
